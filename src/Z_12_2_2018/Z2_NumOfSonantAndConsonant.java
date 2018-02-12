@@ -1,6 +1,6 @@
 package Z_12_2_2018;
 
-public class NumOfSonantAndConsonant {
+public class Z2_NumOfSonantAndConsonant {
 	/**
 	 * 2. Pretpostavimo da su slova A, E, I, O i U samoglasnici. (Smjela
 	 * pretpostavka, znam) Napisati program koji pita korisnika da unese string
