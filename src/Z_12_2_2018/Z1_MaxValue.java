@@ -7,43 +7,39 @@ public class Z1_MaxValue {
 	 * 1. Napisati sljedeæu metodu koja vraæa najveæu vrijednosti u ArrayListu
 	 * Integera. Metoda vraæa null ukoliko je lista null iil ukoliko lista
 	 * sadrži 0 elemenata. public static Integer max(ArrayList<Integer> list)
-	 * 
-	 * 4. Napišite program koji generiše 100 nasumiènih cijelih brojeva izmeðu 0
-	 * i 9 te ispisuje koliko se puta koji broj ponovio.
-	 * 
-	 * 5. Napisati program koji uèitava niz brojeva, pronalazi najveæi broj te
-	 * ispisuje koliko se puta taj broj ponavlja. Pretpostavimo da se unos
-	 * brojeva završava sa nulom.
 	 */
 	public static void main(String[] args) {
-		// kreiranje liste
+
+		// create a list, add elements and invoke a method
 		ArrayList<Integer> list = new ArrayList<Integer>();
-		// dodavanje elemenata u istu
 		list.add(1);
 		list.add(20);
 		list.add(11);
 		list.add(4);
 		list.add(25);
-		// ispis rezultata
-		System.out.print("Najveca vrijednost je: " + max(list));
+		System.out.println("Max value of list is " + max(list));
 
+		// create an empty list and invoke a method
+		ArrayList<Integer> list2 = new ArrayList<Integer>();
+		System.out.println("The list2 is empty, and it's " + max(list2));
 	}
 
-	/** metoda koja vraca vrijednost najveceg broja **/
+	/** the method returns largest number **/
 	public static Integer max(ArrayList<Integer> list) {
-		// pocetna vrijednost varijable maxim
-		Integer maxim = list.get(0);
-
-		if (list.isEmpty()) {
+		// check if list is empty
+		if (list.size() == 0) {
 			return null;
-		} else {
-			for (int i = 1; i < list.size(); i++) {
-				if (list.get(i - 1) < list.get(i)) {
-					maxim = list.get(i);
-				}
+		}
+
+		// get first element from the list
+		Integer largest = list.get(0);
+		// search for largest element from the list using loop
+		for (int i = 1; i < list.size(); i++) {
+			if (list.get(i - 1) < list.get(i)) {
+				largest = list.get(i);
 			}
 		}
-		return maxim;
+		return largest;
 	}
 
 }
