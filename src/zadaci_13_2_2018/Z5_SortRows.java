@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Z5_SortRows {
 	/**
-	 * * 5. Implementirati sljedeæu metodu da sortira redove u 2D nizu.
+	 * 5. Implementirati sljedeæu metodu da sortira redove u 2D nizu.
 	 * 
 	 * public static double[ ][ ] sortRows(double[ ][ ] array)
 	 * 
