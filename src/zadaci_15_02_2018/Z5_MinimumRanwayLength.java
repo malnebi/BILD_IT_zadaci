@@ -1,5 +1,7 @@
 package zadaci_15_02_2018;
 
+import java.util.Scanner;
+
 public class Z5_MinimumRanwayLength {
 	/**
 	 * * 5. Ako imamo ubrzanje aviona a te brzinu pri kojoj avion uzlijeæe v,
@@ -10,8 +12,21 @@ public class Z5_MinimumRanwayLength {
 	 * ubrzanje dužina piste je 514.286)
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// kreiranje scannera za unos sa tastature
+		Scanner input = new Scanner(System.in);
+		System.out.println("Unesite brzinu aviona: ");
+		double v = input.nextDouble();
+		System.out.println("Unesite ubrzanje aviona: ");
+		double a = input.nextDouble();
 
+		input.close();
+
+		// racunanje minimalne duzine piste
+		double ranwayLength = (v * v) / (2 * a);
+		// ispis poruke korisniku
+		System.out.printf(
+				"Minimalna duzina piste za uzlijetanje aviona iznosi: %.3f m.",
+				ranwayLength);
 	}
 
 }
