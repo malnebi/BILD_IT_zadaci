@@ -19,7 +19,7 @@ public class Z3_ReversStringFromFile {
 
 	public static void main(String[] args) throws IOException {
 
-		Path path = Paths.get("obrnuto.txt");
+		Path path = Paths.get("reverse.txt");
 
 		if (!Files.exists(path)) {
 			Files.createFile(path);
