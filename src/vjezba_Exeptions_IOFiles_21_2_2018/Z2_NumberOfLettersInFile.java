@@ -1,12 +1,11 @@
 package vjezba_Exeptions_IOFiles_21_2_2018;
 
 import java.io.BufferedReader;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Z2_NumberOfLettersInFile {
@@ -21,10 +20,14 @@ public class Z2_NumberOfLettersInFile {
 
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter file name: text.txt");
-		Path path = Paths.get(input.nextLine());
-		// Path path = Paths.get("text.txt");
-
 		try {
+			Path path = Paths.get(input.nextLine());
+			// Path path = Paths.get("text.txt");
+
+			if (!Files.exists(path)) {
+				throw new InputMismatchException();
+			}
+
 			BufferedReader reader = Files.newBufferedReader(path);
 			String line;
 
@@ -50,8 +53,8 @@ public class Z2_NumberOfLettersInFile {
 				}
 				System.out.println();
 			}
-		} catch (FileNotFoundException e) {
-			System.out.println("File not found.");
+		} catch (InputMismatchException e) {
+			System.out.println("Input mismatch. ");
 			System.exit(1);
 		}
 	}
