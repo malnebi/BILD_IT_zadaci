@@ -19,10 +19,10 @@ public class LibApp {
 		 System.out.println("Please login.");
 		 System.out.println();
 		
-		 System.out.println("Enter username: ");
+		 System.out.println("Enter username: malnebi (admin) or zakili (regular user) ");
 		 String userName = input.nextLine();
 		
-		 System.out.println("Enter password: ");
+		 System.out.println("Enter password: mal (admin), zakili (regular user)");
 		 String password = input.nextLine();
 		
 		 Users user = new Users(userName, password);
@@ -45,7 +45,6 @@ public class LibApp {
 
 		// UsersDao.archiveUser("majarila", 20);
 
-		Circulation.loanBook(17, 1);
 	}
 
 	public static void mainMenueAdmin() {
